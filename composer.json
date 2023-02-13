@@ -1,0 +1,21 @@
+{
+  "name": "laraxel/vanilla-tdd",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Clairveillance",
+      "homepage": "https://laraxel.com",
+      "email": "info@clairveillance.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "Domain\\": "src/Domain",
+      "Infrastructure\\": "src/Infrastructure"
+    }
+  },
+  "minimum-stability": "dev"
+}
