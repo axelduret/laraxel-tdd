@@ -47,6 +47,14 @@ _If you want to install **Laravel**, move to the root directory and follow these
 
 `composer install`
 
+_Before running migrations you will need to execute **Docker** shell :_
+
+`docker exec -it laraxel_tdd /bin/bash`
+
+`cd src/Infrastructure/Laravel/`
+
+`php artisan migrate:fresh`
+
 _Start coding and enjoy!_
 
 > _http://localhost:8000/_
