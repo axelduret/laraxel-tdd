@@ -2,8 +2,8 @@
 
 _**laraxel-tdd** includes :_
 
-- Laraxel-Vanilla 1.0
-- Laravel 9.51.0
+- laraxel-vanilla 1.0.0
+- laravel 9.51.0
 
 ---
 
