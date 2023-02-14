@@ -2,6 +2,7 @@
   "name": "laraxel/vanilla-tools",
   "type": "tools",
   "license": "MIT",
+  "description": "Some usefull tools.",
   "authors": [
     {
       "name": "Clairveillance",
