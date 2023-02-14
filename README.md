@@ -3,7 +3,7 @@
 _**laraxel-tdd** includes :_
 
 - laraxel-vanilla 1.0.0
-- laravel 9.51.0
+- laravel 10.00.0
 
 ---
 
