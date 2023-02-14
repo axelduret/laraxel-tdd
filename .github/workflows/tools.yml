@@ -33,4 +33,4 @@ jobs:
       run: cd tools && composer install --prefer-dist --no-progress
       
     - name: Execute PHPStan
-      run: cd tools && vendor/bin/phpstan
+      run: tools/vendor/bin/phpstan
