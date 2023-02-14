@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', DomainController::class);
+// Route::get('/', fn () => view('welcome'));
