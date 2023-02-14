@@ -46,6 +46,8 @@ _If you want to install **Laravel**, move to the root directory and follow these
 
 `cd src/Infrastructure/Laravel/`
 
+`cp .env.example .env`
+
 `composer install`
 
 _Before running migrations you will need to execute **Docker** shell :_
