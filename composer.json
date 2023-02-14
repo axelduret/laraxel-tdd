@@ -2,6 +2,7 @@
   "name": "laraxel/vanilla-tdd",
   "type": "project",
   "license": "MIT",
+  "description": "Conciliating Laravel and Test Driven Development",
   "authors": [
     {
       "name": "Clairveillance",
