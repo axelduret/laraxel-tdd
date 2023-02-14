@@ -1,13 +1,14 @@
-# laraxel-tdd
+# [laraxel-tdd](https://github.com/axelduret/laraxel-tdd)
 
+### Features
 _**laraxel-tdd** includes :_
 
 - laraxel-vanilla 1.0.0
-- laravel 10.00.0
+- laravel 10.0.0
 
 ---
 
-## laraxel-vanilla
+## [laraxel-vanilla](https://github.com/axelduret/laraxel-vanilla)
 
 _**laraxel-vanilla** is just a simple **Docker** startup kit with :_
 
