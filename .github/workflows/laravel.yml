@@ -32,4 +32,4 @@ jobs:
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: src/Infrastructure/Laravel/vendor/bin/phpunit src/Infrastructure/Laravel/
+      run: cd src/Infrastructure/Laravel/ && phpunit
