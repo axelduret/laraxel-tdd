@@ -1,4 +1,4 @@
-name: PHP Composer (root)
+name: Laravel-TDD
 
 on:
     push:
