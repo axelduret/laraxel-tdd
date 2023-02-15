@@ -1,17 +1,22 @@
 {
-  "name": "laraxel/vanilla-tools",
-  "type": "tools",
-  "license": "MIT",
-  "description": "Some usefull tools.",
-  "authors": [
-    {
-      "name": "Clairveillance",
-      "homepage": "https://laraxel.com",
-      "email": "info@clairveillance.com"
-    }
-  ],
-  "require-dev": {
-    "phpstan/phpstan": "1.9.14"
-  },
-  "minimum-stability": "dev"
+    "name": "laraxel/vanilla-tools",
+    "type": "tools",
+    "license": "MIT",
+    "description": "Some usefull tools.",
+    "authors": [
+        {
+            "name": "Clairveillance",
+            "homepage": "https://laraxel.com",
+            "email": "info@clairveillance.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Tools\\": ""
+        }
+    },
+    "require-dev": {
+        "phpstan/phpstan": "1.9.14"
+    },
+    "minimum-stability": "dev"
 }
