@@ -2,8 +2,8 @@
 /vendor
 /docker/db/export/**
 /docker/db/import/**
+/src/Domain/vendor
 /tools/vendor
-/tools/composer.lock
 .editorconfig
 .env
 .phpunit.result.cache
