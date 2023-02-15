@@ -1,0 +1,12 @@
+{
+    "name": "laraxel/vanilla-ddd",
+    "description": "The domain layer.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Domain\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}

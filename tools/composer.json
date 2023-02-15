@@ -13,10 +13,5 @@
   "require-dev": {
     "phpstan/phpstan": "1.9.14"
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Tools\\": ""
-    }
-  },
   "minimum-stability": "dev"
 }
