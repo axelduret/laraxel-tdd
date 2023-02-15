@@ -1,4 +1,4 @@
-name: PHP Composer (tools)
+name: PHP Composer (root)
 
 on:
     push:
@@ -17,19 +17,16 @@ jobs:
             - uses: actions/checkout@v3
 
             - name: Validate composer.json and composer.lock
-              run: cd tools && composer validate --strict
+              run: cd src/Domain && composer validate --strict
 
             - name: Cache Composer packages
               id: composer-cache
               uses: actions/cache@v3
               with:
-                  path: tools/vendor
+                  path: src/Domain/vendor
                   key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-php-
 
             - name: Install dependencies
-              run: cd tools && composer install --prefer-dist --no-progress
-
-            - name: Execute PHPStan
-              run: tools/vendor/bin/phpstan
+              run: cd src/Domain && composer install --prefer-dist --no-progress
