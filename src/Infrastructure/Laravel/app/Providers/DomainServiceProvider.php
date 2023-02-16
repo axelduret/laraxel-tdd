@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Domain\GeoCoding\Adapter\Output\GeoCodingSettings;
-use Domain\GeoCoding\Port\Input\GeoCodingSettings as GeoCodingSettingsInterface;
+use App\Services\GeoCoding\Adapter\GeoCodingSettings;
+use Domain\GeoCoding\Port\GeoCodingSettings as GeoCodingSettingsInterface;
 
 class DomainServiceProvider extends ServiceProvider
 {
@@ -13,14 +15,12 @@ class DomainServiceProvider extends ServiceProvider
         GeoCodingSettingsInterface::class => GeoCodingSettings::class,
     ];
 
-    /** @return void */
-    public function register()
+    public function register(): void
     {
         //
     }
 
-    /** @return void */
-    public function boot()
+    public function boot(): void
     {
         //
     }

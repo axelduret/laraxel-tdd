@@ -1,12 +1,24 @@
 {
     "name": "laraxel/vanilla-ddd",
     "description": "The domain layer.",
+    "authors": [
+        {
+            "name": "Clairveillance",
+            "homepage": "https://laraxel.com",
+            "email": "info@clairveillance.com"
+        }
+    ],
+    "type": "project",
     "license": "MIT",
+    "require": {
+        "php": "^8.1.2"
+    },
+    "require-dev": {},
     "autoload": {
         "psr-4": {
             "Domain\\": ""
         }
     },
     "minimum-stability": "dev",
-    "require": {}
+    "prefer-stable": true
 }

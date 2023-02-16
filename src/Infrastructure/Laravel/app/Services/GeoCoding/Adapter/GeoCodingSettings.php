@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Domain\GeoCoding\Adapter\Output;
+namespace App\Services\GeoCoding\Adapter;
 
-use Domain\GeoCoding\Port\Input\GeoCodingSettings as GeoCodingSettingsInterface;
+use Domain\GeoCoding\Port\GeoCodingSettings as GeoCodingSettingsInterface;
 
 class GeoCodingSettings implements GeoCodingSettingsInterface
 {

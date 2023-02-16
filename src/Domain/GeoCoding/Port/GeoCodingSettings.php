@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Domain\GeoCoding\Port\Input;
+namespace Domain\GeoCoding\Port;
 
 interface GeoCodingSettings
 {

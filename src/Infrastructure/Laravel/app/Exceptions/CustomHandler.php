@@ -1,9 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Exceptions;
 
-use Throwable;
-use Psr\Log\LogLevel;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Auth\AuthenticationException;
@@ -11,16 +11,8 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
-class Handler extends ExceptionHandler
+final class CustomHandler extends ExceptionHandler
 {
-    /**
-     * A list of exception types with their corresponding custom log levels.
-     *
-     * @var array<class-string<\Throwable>, \Psr\Log\LogLevel::*>
-     */
-    protected $levels = [
-        //
-    ];
     protected $dontReport = [
         //
     ];
@@ -43,7 +35,7 @@ class Handler extends ExceptionHandler
         return $this->handleApiException($request, $exception);
     }
 
-    public function handleApiException(Request $request, \Throwable $exception): JsonResponse
+    private function handleApiException(Request $request, \Throwable $exception): JsonResponse
     {
         $exception = $this->prepareException($exception);
         if ($exception instanceof HttpResponseException) {
@@ -58,7 +50,7 @@ class Handler extends ExceptionHandler
         return $this->customApiResponse($exception);
     }
 
-    public function customApiResponse(mixed $exception): JsonResponse
+    private function customApiResponse(mixed $exception): JsonResponse
     {
         if (method_exists($exception, 'getStatusCode')) {
             $statusCode = $exception->getStatusCode();
@@ -83,6 +75,13 @@ class Handler extends ExceptionHandler
                 'Internal Server Error' :
                 $exception->getMessage(),
         };
+        // IMPORTANT: Only for Debugging Application.
+        /*
+        if ($statusCode === 500) {
+            $response['trace'] = $exception->getTrace();
+            // $response['code'] = $exception->getCode();
+        }
+        */
         return response()->json(
             data: $response,
             status: $statusCode

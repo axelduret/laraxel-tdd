@@ -1,7 +1,5 @@
 {
     "name": "laraxel/vanilla-tools",
-    "type": "tools",
-    "license": "MIT",
     "description": "Some usefull tools.",
     "authors": [
         {
@@ -10,13 +8,19 @@
             "email": "info@clairveillance.com"
         }
     ],
+    "type": "tools",
+    "license": "MIT",
+    "require": {
+        "php": "^8.1.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "1.9.14"
+    },
     "autoload": {
         "psr-4": {
             "Tools\\": ""
         }
     },
-    "require-dev": {
-        "phpstan/phpstan": "1.9.14"
-    },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
