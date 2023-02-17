@@ -17,13 +17,12 @@ class GeocodingSearchRequest extends FormRequest
         return [
             'format' => [
                 'nullable',
-                'regex:/^[a-zA-Z ]+$/',
                 'in:xml,json,jsonv2,geojson,geocodejson',
             ],
             'street' => [
                 'nullable',
                 'regex:/^[0-9a-zA-Z ]+$/',
-                'min:10',
+                'min:3',
                 'max:100',
             ],
             'postalcode' => [

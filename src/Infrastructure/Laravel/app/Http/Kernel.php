@@ -42,6 +42,12 @@ class Kernel extends HttpKernel
             // \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+
+            // NOTE: CORS Middleware.
+            \App\Http\Middleware\Api\Cors::class,
+
+            // NOTE: ForceJsonResponse Middleware.
+            \App\Http\Middleware\Api\ForceJsonResponse::class,
         ],
     ];
 
