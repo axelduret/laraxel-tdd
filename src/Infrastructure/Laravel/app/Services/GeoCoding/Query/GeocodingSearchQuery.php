@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace App\Services\GeoCoding\Query;
 
+use Domain\GeoCoding\Port\GeoCodingSettings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
-use Domain\GeoCoding\Port\GeoCodingSettings;
 
 class GeocodingSearchQuery
 {
-
     public function __construct(private readonly GeoCodingSettings $settings)
     {
     }
@@ -34,8 +33,8 @@ class GeocodingSearchQuery
 
         return  [
             'status' => $query->status(),
-            'lat' =>  $query->json(0)['lat'] ?? null,
-            'lon' =>  $query->json(0)['lon'] ?? null
+            'lat' => $query->json(0)['lat'] ?? null,
+            'lon' => $query->json(0)['lon'] ?? null,
         ];
     }
 }
