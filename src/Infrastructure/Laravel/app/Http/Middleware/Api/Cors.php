@@ -18,7 +18,6 @@ final class Cors
             'Access-Control-Allow-Origin' => '*',
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
-            // 'Origin' => config('app.url')
         ];
 
         if ($request->getMethod() == 'OPTIONS') {

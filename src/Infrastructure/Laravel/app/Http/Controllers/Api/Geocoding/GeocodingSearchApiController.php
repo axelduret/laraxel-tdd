@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\GeocodingSearchRequest;
 use App\Services\GeoCoding\Query\GeocodingSearchQuery;
 
-class GeocodingSearchApiController extends Controller
+final class GeocodingSearchApiController extends Controller
 {
     // TODO FormRequest.
     // TODO Reverse search.

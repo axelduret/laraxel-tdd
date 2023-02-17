@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Domain\GeoCoding\Type\ValueObject;
 
 /** @extends \ArrayObject<int, string> */
-class GeoCodingSearchParameters extends \ArrayObject
+final class GeoCodingSearchParameters extends \ArrayObject
 {
     public function __construct(
         private readonly string $street = '',
