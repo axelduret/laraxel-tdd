@@ -2,14 +2,12 @@
 
 namespace App\Exceptions;
 
-use Throwable;
-use Psr\Log\LogLevel;
-use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Auth\AuthenticationException;
-use Illuminate\Validation\ValidationException;
-use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class Handler extends ExceptionHandler
 {
@@ -21,6 +19,7 @@ class Handler extends ExceptionHandler
     protected $levels = [
         //
     ];
+
     protected $dontReport = [
         //
     ];
@@ -55,6 +54,7 @@ class Handler extends ExceptionHandler
         if ($exception instanceof ValidationException) {
             $exception = $this->convertValidationExceptionToResponse($exception, $request);
         }
+
         return $this->customApiResponse($exception);
     }
 
@@ -83,6 +83,7 @@ class Handler extends ExceptionHandler
                 'Internal Server Error' :
                 $exception->getMessage(),
         };
+
         return response()->json(
             data: $response,
             status: $statusCode
