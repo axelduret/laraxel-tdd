@@ -30,8 +30,6 @@ services:
             POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
             POSTGRES_PORT: ${POSTGRES_PORT}
             PGDATA: /var/lib/postgresql/data/pgdata
-        volumes:
-            - ./docker/db/postgres:/var/lib/postgresql/data
         networks:
             - laraxel-network
 
@@ -73,8 +71,6 @@ networks:
         driver: bridge
 volumes:
     laraxel-volume-app:
-        driver: local
-    laraxel-volume-postgres:
         driver: local
     laraxel-volume-pgadmin:
         driver: local
