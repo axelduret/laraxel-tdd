@@ -43,7 +43,7 @@ _After cloning this repository, move to the root directory and follow these step
 
 ## Laravel
 
-_If you want to install **Laravel**, move to the root directory and follow these steps :_
+_To install **Laravel** :_
 
 `cd src/Infrastructure/Laravel/`
 
@@ -51,23 +51,29 @@ _If you want to install **Laravel**, move to the root directory and follow these
 
 `composer install`
 
-_Before running migrations you will need to execute **Docker** shell :_
+_Before using **php artisan** you will probably need to execute **Docker** shell :_
 
-`docker exec -it laraxel_tdd /bin/bash` or `composer docker`
+`docker exec -it laraxel_tdd /bin/bash`
+
+_Then inside Docker shell :_
 
 `cd src/Infrastructure/Laravel/`
 
-`php artisan migrate:fresh`
-
-_Start coding and enjoy!_
-
-> _http://localhost:8000/_
+`php artisan <command>`
 
 ---
 
-## phpstan
+## Laravel Pint
 
-_If you want to install **phpstan**, move to the root directory and follow these steps :_
+_Run **laravel pint** from root directory :_
+
+`composer pint`
+
+---
+
+## PHPStan
+
+_To install **phpstan** :_
 
 `cd tools/`
 
@@ -77,6 +83,16 @@ _Run **phpstan** from root directory :_
 
 `composer phpstan`
 
-_Run **laravel pint** from root directory :_
+---
 
-`composer pint`
+## Docker
+
+_Run **Docker** shell from root directory :_
+
+`composer docker`
+
+---
+
+_Start coding and enjoy!_
+
+_https://laraxel.com_
