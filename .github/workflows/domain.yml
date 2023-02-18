@@ -1,4 +1,4 @@
-name: PHP Composer (domain)
+name: Domain
 
 on:
     push:

@@ -1,4 +1,4 @@
-name: PHP Composer (tools)
+name: Tools
 
 on:
     push:
