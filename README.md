@@ -1,10 +1,11 @@
 # [laraxel-tdd](https://github.com/axelduret/laraxel-tdd)
 
 ### Features
+
 _**laraxel-tdd** includes :_
 
-- laraxel-vanilla 1.0.0
-- laravel 10.0.0
+-   laraxel-vanilla 1.0.0
+-   laravel 10.0.0
 
 ---
 
@@ -12,17 +13,17 @@ _**laraxel-tdd** includes :_
 
 _**laraxel-vanilla** is just a simple **Docker** startup kit with :_
 
-- php:8.2.2-apache-buster
+-   php:8.2.2-apache-buster
 
-- postgres:latest
+-   postgres:latest
 
-- dpage/pgadmin4:latest
+-   dpage/pgadmin4:latest
 
-- redis:latest
+-   redis:latest
 
-- redislabs/redisinsight:latest
+-   redislabs/redisinsight:latest
 
-- phpstan/phpstan
+-   phpstan/phpstan
 
 ---
 
@@ -52,7 +53,7 @@ _If you want to install **Laravel**, move to the root directory and follow these
 
 _Before running migrations you will need to execute **Docker** shell :_
 
-`docker exec -it laraxel_tdd /bin/bash`
+`docker exec -it laraxel_tdd /bin/bash` or `composer docker`
 
 `cd src/Infrastructure/Laravel/`
 
@@ -74,4 +75,8 @@ _If you want to install **phpstan**, move to the root directory and follow these
 
 _Run **phpstan** from root directory :_
 
-`tools/vendor/bin/phpstan`
+`composer phpstan`
+
+_Run **laravel pint** from root directory :_
+
+`composer pint`
