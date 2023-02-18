@@ -21,6 +21,16 @@
             "Tools\\": "tools"
         }
     },
+    "scripts": {
+        "docker": "docker exec -it laraxel_tdd /bin/bash",
+        "phpstan": "tools/vendor/bin/phpstan analyse --ansi --memory-limit=1G",
+        "pint": "src/Infrastructure/Laravel/vendor/bin/pint --preset psr12"
+    },
+    "scripts-descriptions": {
+        "docker": "Runs the Docker shell.",
+        "phpstan": "Runs the PHPStan static analyzer.",
+        "pint": "Runs the Laravel Pint code style fixer."
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
