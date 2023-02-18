@@ -8,10 +8,6 @@ use App\Services\GeoCoding\Query\GeocodingSearchQuery;
 
 final class GeocodingSearchApiController extends Controller
 {
-    // TODO FormRequest.
-    // TODO Reverse search.
-    // TODO More parameters.
-
     public function __construct(private readonly GeocodingSearchQuery $query)
     {
     }

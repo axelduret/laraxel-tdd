@@ -76,7 +76,7 @@ final class CustomHandler extends ExceptionHandler
                 'Internal Server Error' :
                 $exception->getMessage(),
         };
-        // IMPORTANT: Only for Debugging Application.
+        // IMPORTANT Only for Debugging Application.
         /*
         if ($statusCode === 500) {
             $response['trace'] = $exception->getTrace();

@@ -14,6 +14,9 @@ final class GeocodingSearchQuery
     {
     }
 
+    // TODO Add reverse search.
+    // TODO Add more parameters.
+
     /** @return array<string,string> */
     public function handle(Request $request): array
     {
@@ -22,10 +25,10 @@ final class GeocodingSearchQuery
         /** @var array<string,string> */
         $parameters = $this->settings->parameters([
             'format' => config('geocoding.format') ?? '',
-            'street' => $request->input('street') ?? '',
-            'postalcode' => $request->input('postalcode') ?? '',
-            'city' => $request->input('city') ?? '',
-            'country' => $request->input('country') ?? '',
+            'street' => $request->validated('street') ?? '',
+            'postalcode' => $request->validated('postalcode') ?? '',
+            'city' => $request->validated('city') ?? '',
+            'country' => $request->validated('country') ?? '',
         ]);
 
         $query = Http::get(

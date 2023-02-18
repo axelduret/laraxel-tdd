@@ -43,10 +43,10 @@ class Kernel extends HttpKernel
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
 
-            // NOTE: CORS Middleware.
+            // NOTE CORS Middleware.
             \App\Http\Middleware\Api\Cors::class,
 
-            // NOTE: ForceJsonResponse Middleware.
+            // NOTE ForceJsonResponse Middleware.
             \App\Http\Middleware\Api\ForceJsonResponse::class,
         ],
     ];

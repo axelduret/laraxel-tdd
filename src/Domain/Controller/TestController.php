@@ -11,7 +11,6 @@ class TestController
     /** @return array<string,string> */
     public function searchParameters(): array
     {
-        $parameters = new GeoCodingSearchParameters();
-        return $parameters->toArray();
+        return (new GeoCodingSearchParameters())->toArray();
     }
 }
