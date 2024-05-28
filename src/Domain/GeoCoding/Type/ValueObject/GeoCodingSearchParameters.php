@@ -8,30 +8,18 @@ namespace Domain\GeoCoding\Type\ValueObject;
 final class GeoCodingSearchParameters extends \ArrayObject
 {
     public function __construct(
-        private readonly string $street = '',
-        private readonly string $postalcode = '',
-        private readonly string $city = '',
-        private readonly string $country = '',
-        private readonly string $format = 'json',
+        public readonly string $street = '',
+        public readonly string $postalcode = '',
+        public readonly string $city = '',
+        public readonly string $country = '',
+        public readonly string $format = 'json',
     ) {
         parent::__construct([
-            $this->street,
-            $this->postalcode,
-            $this->city,
-            $this->country,
-            $this->format,
+            'street' => $street,
+            'postalcode' => $postalcode,
+            'city' => $city,
+            'country' => $country,
+            'format' => $format,
         ]);
-    }
-
-    /** @return array<string,string> */
-    public function toArray(): array
-    {
-        return [
-            'street' => $this->street,
-            'postalcode' => $this->postalcode,
-            'city' => $this->city,
-            'country' => $this->country,
-            'format' => $this->format,
-        ];
     }
 }

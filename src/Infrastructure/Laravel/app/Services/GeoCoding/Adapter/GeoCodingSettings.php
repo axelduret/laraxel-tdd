@@ -16,6 +16,6 @@ final class GeoCodingSettings implements GeoCodingSettingsInterface
 
     public function parameters(array $attributes): array
     {
-        return (new GeoCodingSearchParameters(...$attributes))->toArray();
+        return (new GeoCodingSearchParameters(...$attributes))->getArrayCopy();
     }
 }
